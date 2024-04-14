@@ -33,5 +33,101 @@ Existem diversos serviços de cloud para rodar notebooks além do Google Colab e
 
 https://www.dataschool.io/cloud-services-for-jupyter-notebook/
 
+917 views
 
+[![Leonardo Dias Profile picture](https://pbs.twimg.com/profile_images/1734580159800299520/0C6ZKkXY_bigger.jpg)](/user/leonardodias)
+
+#### [Leonardo Dias](/user/leonardodias)
+
+Subscribe
+
+[@leonardodias](//twitter.com/leonardodias)
+
+[Nov 14, 2022](https://twitter.com/leonardodias/status/1592001220817870851 "Read on X") • 24 tweets • 11 min read • [Read on X](https://twitter.com/leonardodias/status/1592001220817870851)
+
+[Scrolly](/scrolly/1592001220817870851 "view in dynamic scrolly mode")
+
+Bookmark
+
+Save as PDF
+
+Gostam de dados, números, manipulação de dados e programação? Que tal uma thread educativa sobre o assunto usando os dados oficiais do sufrágio?  
+  
+Sigam o fio 🧵🧵🧵
+
+Nessa thread vamos falar de:  
+  
+1) Engenharia de dados  
+2) Enriquecimento de dados  
+3) Qualidade de dados  
+4) Ciência de dados  
+5) Análise exploratória  
+  
+Tudo isso usando Spark SQL, Spark ML, Pandas, Seaborn e Python. Bora?
+
+Primeiro os downloads: todos os datasets foram obtidos do portal [dadosabertos.tse.jus.br](http://dadosabertos.tse.jus.br). Basta buscar por 2002 e todos os datasets estarão lá. Depois é só descomprimir e utilizar à vontade. Vamos lá!
+
+Usei um notebook Jupyter para a análise. Primeiro importamos as bibliotecas. Você pode precisar instalar algumas delas. Sugiro conda ou pip. [![Image](https://pbs.twimg.com/media/Fhfl40bXkAciXm0.jpg)](https://pbs.twimg.com/media/Fhfl40bXkAciXm0.jpg)
+
+Leitura dos datasets e criação dos dataframes: [![Image](https://pbs.twimg.com/media/FhfmAxtXgAEns_m.jpg)](https://pbs.twimg.com/media/FhfmAxtXgAEns_m.jpg)
+
+Vamos examinar os schemas dos datasets. É possível ver alguns problemas, como campos data como string, por exemplo. [![Image](https://pbs.twimg.com/media/FhfmQJ6X0AYggJE.png)](https://pbs.twimg.com/media/FhfmQJ6X0AYggJE.png)[![Image](https://pbs.twimg.com/media/FhfmUZFWAAIgtzP.jpg)](https://pbs.twimg.com/media/FhfmUZFWAAIgtzP.jpg)[![Image](https://pbs.twimg.com/media/FhfmXd2XwAI3s_A.jpg)](https://pbs.twimg.com/media/FhfmXd2XwAI3s_A.jpg)
+
+Na engenharia de dados nos preocupamos com qualidade dos dados, conversão de campos para timestamp e criação das chaves urna\_id e zona\_id que serão utilizadas para fazer joins e tornar os dados verticalizados originais em horizontalizados para análises diversas. [![Image](https://pbs.twimg.com/media/Fhfmlg7XwAYeGeW.png)](https://pbs.twimg.com/media/Fhfmlg7XwAYeGeW.png)[![Image](https://pbs.twimg.com/media/FhfmrWLWYAAwTiu.jpg)](https://pbs.twimg.com/media/FhfmrWLWYAAwTiu.jpg)[![Image](https://pbs.twimg.com/media/Fhfmwq7XwAY3IZk.jpg)](https://pbs.twimg.com/media/Fhfmwq7XwAY3IZk.jpg)[![Image](https://pbs.twimg.com/media/Fhfm172WQAEAK9M.jpg)](https://pbs.twimg.com/media/Fhfm172WQAEAK9M.jpg)
+
+Para juntar todos os dataframes e agrupá-los por urna\_id, foi necessário um grande comando SQL cheio de funções matemáticas. Com isso criamos diversos campos úteis para a análise de dados. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfnKL2XEAIUnGz.jpg)
+
+Com o objetivo de juntar o máximo de dados possíveis, resolvi juntar também o dataset de mesários. A informação mais relevante que encontrei é se eram voluntários ou não e o total de mesários de cada zona. O número é por zona, não por seção. Daí a necessidade do zona\_id. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfnfF_X0AIn_VQ.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfnlaVXoAEM7r0.jpg)
+
+Com isso criamos o dataframe vm, que agora contém dados de 3 datasets diferentes. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfnuuDWYAAVVBq.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfnzO5WYAEWb9U.jpg)
+
+Como há muitas variáveis e é difícil para um ser humano ficar analisando variável por variável, resolvi fazer uma análise usando machine learning. Escolhi uma técnica de machine learning não supervisionado de agrupamento (clustering). Usei k=4 após testar com outros números. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfoWF_X0AAf7JI.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfobmhWIAAiaXT.jpg)
+
+Para tentar entender como o algoritmo dividiu os dados, fiz algumas análises com pivot usando o método crosstab no dataframe predictions. Dá para ver algumas coisas interessantes sobre como os dados ficaram separados. [![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfou6AWYAEVgSL.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfo-voXkAMaUxg.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfpEGqXEAIR-Ur.jpg)
+
+Fizemos então a análise gráfica. Aquele mesmo gráfico de bolinhas. Cada bolinha é uma seção. Os eixos são os mesmos. Só que agora estamos filtrando cada cluster descoberto pelo algoritmo de inteligência artificial utilizado. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfpRnJX0AAPVpQ.png)
+
+Como ficou o cluster 0, o mais intrigante por ter mais variabilidade. Vejam os gráficos.  
+  
+Nos eixos superior temos a concentração de frequência na barra, E acima e ao lado direito, temos a distribuição de frequência de cada um dos itens coloridos pelo gráfico. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfpiFuXEAIHVrg.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfpt5tXgAEvHNe.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfpwYXXgAAlsCD.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfpzcFXgAMLdEw.png)
+
+Último gráfico do cluster 0: [![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfp7o1XgAEzwfS.png)
+
+Como ficou o cluster 1. Muito interessante o caráter bimodal da frequência das urnas que não são 2020, que foram todas agrupadas nesse grupo 1. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfqDvGWAAAW-u0.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfqHFaWIAAvpPz.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfqPMqWAAAfKfD.png)
+
+Grupos 2 e 3 Vejam como ficou. Grupo 2, primeiros 2 gráficos, grupo 3, 2 últimos. [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfqWxKXwAEcDes.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfqZunX0AESvjs.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfqd9MXEAEusqk.png)[![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfqkk_X0AAgnlj.png)
+
+Por último, fiz algumas análises por algumas variáveis considerando a diferença entre eles. Vejam que interessante: [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfqvwkXkAIpEka.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfq2zlWYAEgznz.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfq8LlWIAc-OL8.jpg)[![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfrBd2XkAEUvVm.jpg)
+
+Continuando: [![Image](/images/1px.png)](https://pbs.twimg.com/media/FhfrGNDXwAEF2QJ.jpg)
+
+Outra análise que fiz foi procurar zonas onde havia mais de um tipo de urna. Encontrei algumas para verificar se há mesmo diferenças entre essas seções e se é significativa.  
+  
+Escolhi a cidade de Registro, em SP, por ter vários modelos de urna numa mesma zona. [![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfrq1TXkAEmkHJ.jpg)
+
+O resultado é que há mesmo diferença de resultados entre as seções com determinados modelos. Mesmo sendo de uma mesma zona de uma mesma cidade. No entanto há diferenças entre o número de seções com cada modelo. Várias coisas podem explicar, mas é curioso de qualquer maneira. [![Image](/images/1px.png)](https://pbs.twimg.com/media/Fhfr-81XkAAmXcD.png)
+
+Há muitas possibilidades de analisar esses dados e também de agregar mais dados, como geolocalização, dados de clima e outros fatores interessantes.  
+  
+Que outros dados você agregaria? E o que gostaria de saber desses dados? Essa thread agora vai ser complementada por você!
+
+Espero, com essa thread educativa, inspirar muitos de vocês a trabalharem com dados, números, estatísticas, matemática, big data, machine learning, ciência e engenharia de dados.  
+  
+Vamos? Obrigado por ler até aqui e espero que tenha gostado!
+
+Link para o repositório no GitHub:  
+  
+[github.com/leonardodiasda…](https://github.com/leonardodiasdatascientist/Votacao2oTurno)
+
+[![](https://opengraph.githubassets.com/b5fcff31b859cbb7a8bb525f3320a5762058778baa7de606158cb4c6d6139342/leonardodiasdatascientist/Votacao2oTurno)](https://github.com/leonardodiasdatascientist/Votacao2oTurno)
+
+[**GitHub - leonardodiasdatascientist/Votacao2oTurno** Contribute to leonardodiasdatascientist/Votacao2oTurno development by creating an account on GitHub.](https://github.com/leonardodiasdatascientist/Votacao2oTurno) [https://github.com/leonardodiasdatascientist/Votacao2oTurno](https://github.com/leonardodiasdatascientist/Votacao2oTurno)
+
+• • •
+
+Missing some Tweet in this thread? You can try to [force a refresh](#)
+
+　
+
+[Post](https://twitter.com/intent/tweet?text=Thread%20by%20@leonardodias%20on%20Thread%20Reader%20App&url=https%3A%2F%2Fthreadreaderapp.com%2Fthread%2F1592001220817870851.html) [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthreadreaderapp.com%2Fthread%2F1592001220817870851.html) [Email](mailto:?subject=Thread%20by%20@leonardodias%20on%20Thread%20Reader%20App&body=@leonardodias:%20Gostam%20de%20dados,%20n%C3%BAmeros,%20manipula%C3%A7%C3%A3o%20de%20dados%20e%20programa%C3%A7%C3%A3o?%20Que%20tal%20uma%20thread%20educativa%20sobre%20o%20assunto%20usando%20os%20dados%20oficiais%20do%20sufr%C3%A1gio?%20Sigam%20o%20fio%20%F0%9F%A7%B5%F0%9F%A7%B5%F0%9F%A7%B5%20Nessa%20thread%20vamos%20falar%20de:%201)%20Engenha...%E2%80%A6%0A%0Ahttps://threadreaderapp.com/thread/1592001220817870851.html)
 

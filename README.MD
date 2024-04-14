@@ -33,23 +33,14 @@ Existem diversos serviços de cloud para rodar notebooks além do Google Colab e
 
 https://www.dataschool.io/cloud-services-for-jupyter-notebook/
 
-917 views
 
-[![Leonardo Dias Profile picture](https://pbs.twimg.com/profile_images/1734580159800299520/0C6ZKkXY_bigger.jpg)](/user/leonardodias)
-
-#### [Leonardo Dias](/user/leonardodias)
-
-Subscribe
+## Subscribe
 
 [@leonardodias](//twitter.com/leonardodias)
 
 [Nov 14, 2022](https://twitter.com/leonardodias/status/1592001220817870851 "Read on X") • 24 tweets • 11 min read • [Read on X](https://twitter.com/leonardodias/status/1592001220817870851)
 
-[Scrolly](/scrolly/1592001220817870851 "view in dynamic scrolly mode")
-
-Bookmark
-
-Save as PDF
+ 
 
 Gostam de dados, números, manipulação de dados e programação? Que tal uma thread educativa sobre o assunto usando os dados oficiais do sufrágio?  
   
@@ -122,12 +113,4 @@ Link para o repositório no GitHub:
 [![](https://opengraph.githubassets.com/b5fcff31b859cbb7a8bb525f3320a5762058778baa7de606158cb4c6d6139342/leonardodiasdatascientist/Votacao2oTurno)](https://github.com/leonardodiasdatascientist/Votacao2oTurno)
 
 [**GitHub - leonardodiasdatascientist/Votacao2oTurno** Contribute to leonardodiasdatascientist/Votacao2oTurno development by creating an account on GitHub.](https://github.com/leonardodiasdatascientist/Votacao2oTurno) [https://github.com/leonardodiasdatascientist/Votacao2oTurno](https://github.com/leonardodiasdatascientist/Votacao2oTurno)
-
-• • •
-
-Missing some Tweet in this thread? You can try to [force a refresh](#)
-
-　
-
-[Post](https://twitter.com/intent/tweet?text=Thread%20by%20@leonardodias%20on%20Thread%20Reader%20App&url=https%3A%2F%2Fthreadreaderapp.com%2Fthread%2F1592001220817870851.html) [Share](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthreadreaderapp.com%2Fthread%2F1592001220817870851.html) [Email](mailto:?subject=Thread%20by%20@leonardodias%20on%20Thread%20Reader%20App&body=@leonardodias:%20Gostam%20de%20dados,%20n%C3%BAmeros,%20manipula%C3%A7%C3%A3o%20de%20dados%20e%20programa%C3%A7%C3%A3o?%20Que%20tal%20uma%20thread%20educativa%20sobre%20o%20assunto%20usando%20os%20dados%20oficiais%20do%20sufr%C3%A1gio?%20Sigam%20o%20fio%20%F0%9F%A7%B5%F0%9F%A7%B5%F0%9F%A7%B5%20Nessa%20thread%20vamos%20falar%20de:%201)%20Engenha...%E2%80%A6%0A%0Ahttps://threadreaderapp.com/thread/1592001220817870851.html)
 
